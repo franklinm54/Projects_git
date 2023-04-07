@@ -2,7 +2,7 @@
 :root {
 	--main-Isabelline: linear-gradient(to right, #434343 0%, black 100%);
 	--main-Medium-jungle-green: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
-	--main-Dark-slate-gray: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+	--main-Dark-slate-gray: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
 	--main-Cadet: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   }
   

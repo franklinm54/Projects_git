@@ -8,7 +8,8 @@
 }
 
 body {
-	background-color: #43449e;
+	/* background-color: #43449e; */
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 	font-family: 'Muli', sans-serif;
 	display: flex;
 	align-items: center;

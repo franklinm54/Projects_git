@@ -5,7 +5,8 @@
 }
 
 body {
-	background-color: #fafafa;
+	/* background-color: #fafafa; */
+	background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
