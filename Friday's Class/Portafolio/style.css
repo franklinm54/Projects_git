@@ -1,9 +1,9 @@
 /* Custom properties/variables  */
 :root {
-	--main-Isabelline: #F5F2E7;
-	--main-Medium-jungle-green: #2C3333;
-	--main-Dark-slate-gray: #395B64;
-	--main-Cadet: #5A6675;
+	--main-Isabelline: linear-gradient(to right, #434343 0%, black 100%);
+	--main-Medium-jungle-green: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+	--main-Dark-slate-gray: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+	--main-Cadet: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   }
   
   /* Base reset */
@@ -154,7 +154,8 @@
 	width: 100%;
 	height: 100vh;
 	background-color: #000;
-	background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+		/* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
   }
   
   .welcome-section > p {
@@ -230,7 +231,7 @@
 	font-size: 2rem;
 	padding: 2rem 0.5rem;
   }
-  
+
   .btn {
 	display: inline-block;
 	padding: 1rem 2rem;
