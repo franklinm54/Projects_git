@@ -1,32 +1,33 @@
-/* @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Lora&display=swap'); */
-
 /*** BASE ***/
+/*La regla body establece que todos los elementos dentro del cuerpo de la página deben tener un tamaño de caja de borde y un margen de 0. Además, el texto debe tener una fuente serif llamada "Droid Serif" y un color de texto de # 333. */
 body {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: "Droid Serif", serif;
-    color: #333;
-  }
-  
-  body * {padding: 0;}
-  section {text-align: center;}
-  ul li {list-style: none;}
-  
-  .container {max-width: 700px; margin: auto;}
-  .row {padding: 1.5rem 1rem;}
-  
-  #content {margin: auto;}
-  #title, #footer {color: #fdfdfd;}
-  
-  
-  hr {
-    margin: 3rem auto;
-    border: 0.5px solid #333;
-    width: 200px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Droid Serif", serif;
+  color: #333;
+}
+body * {padding: 0;}/* La regla body * establece que todos los elementos dentro del cuerpo no deben tener ningún relleno.*/
+section {text-align: center;}/*La regla section establece que todos los elementos de la sección deben estar centrados en la página.*/
+ul li {list-style: none;} /* La regla ul li establece que todas las listas no deben tener viñetas. */
+.container {max-width: 700px; margin: auto;}/*La regla .container establece que el ancho máximo del contenedor es de 700px y que se debe centrar en la página. */
+.container h1 {text-align: center;}/*La regla .container h1 establece que el texto de la cabecera de la página debe estar centrado en la página.*/
+
+#content {margin: auto;}/*La regla #content establece que el contenido debe estar centrado en la página.
+ */
+#title, #footer {color: #fdfdfd;}/*La regla #title, #footer establece que los elementos con los identificadores "title" y "footer" deben tener un color de texto de #fdfdfd. */
+
+ /*La regla hr establece que debe haber una línea horizontal con un ancho de 200px, un borde sólido de 0.5px y un color de #333. Además, hay un margen superior e inferior de 3rem y el elemento está centrado horizontalmente. */
+ hr {
+  margin: 3rem auto;
+  border: 0.5px solid #333;
+  width: 200px;
+}
+
+
+
   /*** HEADER #TRIBUTE-INFO ***/
+
+  /*La regla #tribute-info establece que el elemento con el identificador "tribute-info" debe tener una imagen de fondo, que se ajustará al tamaño del elemento. La imagen se centra y el elemento también está centrado verticalmente con la propiedad align-items. Además, tiene una altura de 100vh y se muestra como un elemento flexible. */
   #tribute-info {
     background-image: url(https://www.princexml.com/howcome/ego.jpg);
     background-size: cover;
@@ -37,6 +38,8 @@ body {
     align-items: center;
   }
   
+
+  /*La regla #title establece que el elemento con el identificador "title" debe tener un tamaño de fuente de 2.2rem y un relleno izquierdo de 10rem. Cuando la pantalla tiene un ancho máximo de 600px, el elemento se centra horizontalmente */
   #title {
     font-size: 2.2rem;
     padding-left: 10rem;
@@ -47,247 +50,5 @@ body {
     #title {padding-left: 0;}
   }
   
-  /*** BLOCKQUTE ***/
-  blockquote {
-    margin: 2rem auto;
-    max-width: 600px;
-    color: gray;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-  }
   
-  blockquote * {
-    margin: 0;
-    padding: 0.5rem 1rem;
-  }
-  
-  /*** SECTION .TIMELINE ***/
-  .timeline {
-    background: #ff6e7f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #807bac, #959da0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding-bottom: 3rem;
-  }
-  
-  .timeline #img-div {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .timeline #img-div #image {
-    display: block;
-    max-width: 300px;
-    margin: auto;
-    box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.2);
-  }
-  
-  .timeline #img-div figcaption {
-    margin-top: 1rem;
-    font-size: 0.7rem;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  /*** SECTION .DISCOGRAPHY ***/
-  .discography .columns {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-  }
-  
-  .discography .columns .column {width: 50%;}
-  .discography .columns .column li {line-height: 2;}
-  
-  @media (max-width: 600px) {
-    .discography .columns {
-      flex-direction: column;
-      align-items: center;
-    }
-    .discography .columns .column {width: 100%;}
-  }
-  
-  /*** FOOTER ***/
-  #footer {
-    background-color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 3rem;
-  }
-  
-  #tribute-link {
-    text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: white;
-    margin-top: 1rem;
-    padding: 0.3rem 2.5rem;
-    line-height: 2;
-    background: #ff6e7f;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a3a9ac, #9c9898); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 2px;
-    transition: all ease 0.3s;
-  }
-  
-  #tribute-link:hover {transform: scale(1.1);}
-  
-  #footer img {width: 80px;}
 
-/* SOCIAL PANEL CSS */
-.social-panel-container {
-	position: fixed;
-	right: 0;
-	bottom: 80px;
-	transform: translateX(100%);
-	transition: transform 0.4s ease-in-out;
-}
-
-.social-panel-container.visible {
-	transform: translateX(-10px);
-}
-
-.social-panel {	
-	background-color: #fff;
-	border-radius: 16px;
-	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
-	border: 5px solid #001F61;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Muli';
-	position: relative;
-	height: 169px;	
-	width: 370px;
-	max-width: calc(100% - 10px);
-}
-
-.social-panel button.close-btn {
-	border: 0;
-	color: #97A5CE;
-	cursor: pointer;
-	font-size: 20px;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-}
-
-.social-panel button.close-btn:focus {
-	outline: none;
-}
-
-.social-panel p {
-	background-color: #001F61;
-	border-radius: 0 0 10px 10px;
-	color: #fff;
-	font-size: 14px;
-	line-height: 18px;
-	padding: 2px 17px 6px;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin: 0;
-	transform: translateX(-50%);
-	text-align: center;
-	width: 235px;
-}
-
-.social-panel p i {
-	margin: 0 5px;
-}
-
-.social-panel p a {
-	color: #FF7500;
-	text-decoration: none;
-}
-
-.social-panel h4 {
-	margin: 20px 0;
-	color: #97A5CE;	
-	font-family: 'Muli';	
-	font-size: 14px;	
-	line-height: 18px;
-	text-transform: uppercase;
-}
-
-.social-panel ul {
-	display: flex;
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-.social-panel ul li {
-	margin: 0 10px;
-}
-
-.social-panel ul li a {
-	border: 1px solid #DCE1F2;
-	border-radius: 50%;
-	color: #001F61;
-	font-size: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	width: 50px;
-	text-decoration: none;
-}
-
-.social-panel ul li a:hover {
-	border-color: #FF6A00;
-	box-shadow: 0 9px 12px -9px #FF6A00;
-}
-
-.floating-btn {
-	border-radius: 26.5px;
-	background-color: #001F61;
-	border: 1px solid #001F61;
-	box-shadow: 0 16px 22px -17px #03153B;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 12px 20px;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	z-index: 999;
-}
-
-.floating-btn:hover {
-	background-color: #ffffff;
-	color: #001F61;
-}
-
-.floating-btn:focus {
-	outline: none;
-}
-
-.floating-text {
-	background-color: #001F61;
-	border-radius: 10px 10px 0 0;
-	color: #fff;
-	font-family: 'Muli';
-	padding: 7px 15px;
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 10;
-}
-
-.floating-text a {
-	color: #FF7500;
-	text-decoration: none;
-}
-
-@media screen and (max-width: 480px) {
-
-	.social-panel-container.visible {
-		transform: translateX(0px);
-	}
-	
-	.floating-btn {
-		right: 10px;
-	}
-}

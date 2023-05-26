@@ -1,0 +1,388 @@
+
+/*** BASE ***/
+/*La regla body establece que todos los elementos dentro del cuerpo de la página deben tener un tamaño de caja de borde y un margen de 0. Además, el texto debe tener una fuente serif llamada "Droid Serif" y un color de texto de # 333. */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Droid Serif", serif;
+    color: #333;
+  }
+  
+  body * {padding: 0;}/* La regla body * establece que todos los elementos dentro del cuerpo no deben tener ningún relleno.*/
+
+  section {text-align: center;}/*La regla section establece que todos los elementos de la sección deben estar centrados en la página.*/
+  ul li {list-style: none;} /* La regla ul li establece que todas las listas no deben tener viñetas. */
+  
+  .container {max-width: 700px; margin: auto;}/*La regla .container establece que el ancho máximo del contenedor es de 700px y que se debe centrar en la página. */
+  .row {padding: 1.5rem 1rem;}/*La regla .row establece un relleno superior e inferior de 1.5rem y un relleno lateral de 1rem.
+
+  */
+  
+  #content {margin: auto;}/*La regla #content establece que el contenido debe estar centrado en la página.
+
+  */
+  #title, #footer {color: #fdfdfd;}/*La regla #title, #footer establece que los elementos con los identificadores "title" y "footer" deben tener un color de texto de #fdfdfd. */
+  
+  /*La regla hr establece que debe haber una línea horizontal con un ancho de 200px, un borde sólido de 0.5px y un color de #333. Además, hay un margen superior e inferior de 3rem y el elemento está centrado horizontalmente. */
+  hr {
+    margin: 3rem auto;
+    border: 0.5px solid #333;
+    width: 200px;
+  }
+
+
+
+
+
+  
+  /*** HEADER #TRIBUTE-INFO ***/
+
+  /*La regla #tribute-info establece que el elemento con el identificador "tribute-info" debe tener una imagen de fondo, que se ajustará al tamaño del elemento. La imagen se centra y el elemento también está centrado verticalmente con la propiedad align-items. Además, tiene una altura de 100vh y se muestra como un elemento flexible. */
+  #tribute-info {
+    background-image: url(https://www.princexml.com/howcome/ego.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  /*La regla #title establece que el elemento con el identificador "title" debe tener un tamaño de fuente de 2.2rem y un relleno izquierdo de 10rem. Cuando la pantalla tiene un ancho máximo de 600px, el elemento se centra horizontalmente */
+  #title {
+    font-size: 2.2rem;
+    padding-left: 10rem;
+  }
+  
+  @media (max-width: 600px) {
+    #tribute-info {justify-content: center}
+    #title {padding-left: 0;}
+  }
+  
+  /*** BLOCKQUTE ***/
+
+  /*La regla blockquote establece que el bloque de cita debe tener un margen superior e inferior de 2rem y un ancho máximo de 600px. El texto debe tener un color gris, una fuente sans-serif y un tamaño de fuente de 1.2rem. Además, el texto dentro del bloque de cita debe tener un relleno superior e inferior de 0.5rem y un relleno lateral de 1rem. */
+  blockquote {
+    margin: 2rem auto;
+    max-width: 600px;
+    color: gray;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  /*La regla blockquote * establece que todos los elementos dentro del bloque de cita deben tener un margen y un relleno de 0. */
+  blockquote * {
+    margin: 0;
+    padding: 0.5rem 1rem;
+  }
+
+
+  
+  /*** SECTION .TIMELINE ***/
+
+  /*La regla .timeline establece un gradiente de fondo para el elemento con la clase "timeline". También tiene un relleno inferior de 3rem. */
+  .timeline {
+    background: #ff6e7f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #807bac, #959da0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 3rem;
+  }
+
+  /*La regla .timeline #img-div establece que el elemento con el identificador "img-div" no debe tener ningún margen o relleno. */
+  
+  .timeline #img-div {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /*La regla .timeline #img-div #image establece que la imagen se muestre como un bloque (display: block), con un ancho máximo de 300 píxeles (max-width: 300px), centrada horizontalmente (margin: auto) y con una sombra (box-shadow) de 10 píxeles que se desvanece hacia un color transparente blanco (rgba(255,255,255,0.2)).. */
+  .timeline #img-div #image {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.2);
+  }
+  
+/*".timeline #img-div figcaption": Esta regla CSS establece que el "figcaption" tenga un margen superior de 1 rem (margin-top: 1rem), un tamaño de fuente de 0.7 rem (font-size: 0.7rem) y una fuente sans-serif genérica (font-family: Helvetica, Arial, sans-serif).*/
+
+  .timeline #img-div figcaption {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  /*** SECTION .DISCOGRAPHY ***/
+
+  /*".discography .columns":  Esta regla CSS establece que el contenido de "columns" se muestre como una fila flexible (display: flex) centrada horizontalmente (justify-content: center) y con un margen de 2 rem en todos los lados (margin: 2rem). */
+  .discography .columns {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+  
+  /*".discography .columns .column": esto se refiere a un elemento con clase "column" que está dentro del elemento con clase "columns" que está dentro del elemento con clase "discography". Esta regla CSS establece que "column" ocupe el 50% del ancho de su contenedor (width: 50%). */
+  .discography .columns .column {width: 50%;}
+
+  /*".discography .columns .column li": esto se refiere a un elemento "li" que está dentro de un elemento con clase "column" que está dentro del elemento con clase "columns" que está dentro del elemento con clase "discography". Esta regla CSS establece que la altura de línea del "li" sea el doble de su tamaño de fuente (line-height: 2). */
+  .discography .columns .column li {line-height: 2;}
+  
+  /*"@media (max-width: 600px)": esto indica que las siguientes reglas CSS se aplicarán solo cuando el ancho de la pantalla sea menor o igual a 600 píxeles. Esto se conoce como un "media query". */
+  @media (max-width: 600px) {
+    .discography .columns {
+      flex-direction: column;
+      align-items: center;
+    }
+    /*".discography .columns.flex-direction: column": esto se refiere a un elemento con clase "columns" que está dentro del elemento con clase "discography". En este caso, la regla CSS cambia la dirección flexible de "columns" a columna (flex-direction: column) y centra verticalmente su contenido (align-items: center). Además, la regla cambia el ancho de "column" al 100% (width: 100%). */
+    .discography .columns .column {width: 100%;}
+  }
+
+
+  
+  /*** FOOTER ***/
+
+  /*#footer": esto se refiere a un elemento con id "footer". Esta regla CSS establece que el contenido de "footer" se muestre como una columna flexible (display: flex) con alineación vertical centrada (align-items: center) y un relleno inferior de 3 rem (padding-bottom: 3rem). */
+  #footer {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+  
+
+  /*text-decoration: none;: elimina el subrayado predeterminado de los enlaces.
+
+font-family: Helvetica, Arial, sans-serif;: establece la fuente utilizada para el texto del enlace.
+
+color: white;: establece el color del texto del enlace en blanco.
+
+margin-top: 1rem;: establece un margen superior de 1rem para el enlace.
+
+padding: 0.3rem 2.5rem;: establece un relleno de 0.3rem en la parte superior e inferior y 2.5rem en los lados izquierdo y derecho.
+
+line-height: 2;: establece la altura de línea del texto del enlace en 2.
+
+background: #ff6e7f;: establece un color de fondo sólido en caso de que las gradaciones lineales no estén disponibles.
+
+background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);: establece una gradación lineal de izquierda a derecha utilizando dos colores diferentes (#bfe9ff y #ff6e7f) para navegadores basados en WebKit (como Chrome y Safari) de versiones 10 a 25.
+
+background: linear-gradient(to right, #a3a9ac, #9c9898);: establece una gradación lineal de izquierda a derecha utilizando dos colores diferentes (#a3a9ac y #9c9898) para navegadores que cumplan con los estándares de W3C (como Firefox, Chrome y Opera).
+
+border-radius: 2px;: establece la curvatura de las esquinas del enlace en 2 píxeles.
+
+transition: all ease 0.3s;: establece una transición suave de todas las propiedades con una duración de 0.3 segundos. */
+  #tribute-link {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    margin-top: 1rem;
+    padding: 0.3rem 2.5rem;
+    line-height: 2;
+    background: #ff6e7f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a3a9ac, #9c9898); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 2px;
+    transition: all ease 0.3s;
+  }
+  
+  /*#tribute-link:hover {transform: scale(1.1);}: cambia la escala del enlace a 1.1 (un 10% más grande) cuando el cursor del mouse está sobre él. */
+  #tribute-link:hover {transform: scale(1.1);}
+  
+  /*#footer img {width: 80px;}: establece un ancho de 80 píxeles para las imágenes dentro del elemento con el identificador #footer. */
+  #footer img {width: 80px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
